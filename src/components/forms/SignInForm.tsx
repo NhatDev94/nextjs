@@ -34,14 +34,18 @@ export default function SignInForm({
         {
           name: "email",
           label: "Email",
-          placeholder: "Enter your email",
-          type: "email",
+          input: {
+            placeholder: "Enter your email",
+            type: "email",
+          },
         },
         {
           name: "password",
           label: "Password",
-          placeholder: "Enter your password",
-          type: "password",
+          input: {
+            placeholder: "Enter your password",
+            type: "password",
+          },
         },
       ]}
       submitText="Sign In"

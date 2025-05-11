@@ -7,7 +7,10 @@ import store from "@/redux/store";
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <Provider store={store}>
-      <div className="w-screen h-[100dvh]">{children}</div>
+      <div className="w-screen h-[100dvh]">
+        <Header />
+        <div className="w-full h-full ">{children}</div>
+      </div>
     </Provider>
   );
 };

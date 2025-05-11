@@ -36,7 +36,7 @@ export default function Form({
                 <FormItem>
                   <FormLabel>{item.label}</FormLabel>
                   <FormControl>
-                    <Input {...field} placeholder={item.placeholder} />
+                    <Input {...field} {...item.input} />
                   </FormControl>
                   <FormDescription />
                   <FormMessage />

@@ -1,5 +1,5 @@
-import Select from "@/components/Select";
-import Title from "@/components/texts/Title";
+import Select from "@/components/common/Select";
+import Title from "@/components/common/texts/Title";
 
 export default function Sort() {
   const items = [

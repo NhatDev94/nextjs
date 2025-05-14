@@ -6,7 +6,7 @@ import {
   Select as SelectRoot,
   SelectTrigger,
   SelectValue,
-} from "./shadcn/select";
+} from "../shadcn/select";
 
 type SelectProps = {
   items: any;

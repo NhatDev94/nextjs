@@ -1,6 +1,6 @@
 "use client";
 
-import SignInForm from "@/components/forms/SignInForm";
+import SignInForm from "@/components/common/forms/SignInForm";
 import { signIn } from "@/redux/slices/authSlice";
 import { AppDispatch } from "@/redux/store";
 import { useRouter } from "next/navigation";

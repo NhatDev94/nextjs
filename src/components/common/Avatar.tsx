@@ -1,9 +1,8 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import {
   AvatarFallback,
   AvatarImage,
   Avatar as AvatarRoot,
-} from "./shadcn/avatar";
+} from "../shadcn/avatar";
 
 type AvatarProps = {
   src: string | Blob | undefined;

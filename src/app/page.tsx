@@ -1,6 +1,6 @@
 "use client";
 
-import Title from "@/components/texts/Title";
+import Title from "@/components/common/texts/Title";
 import Sort from "./components/Sort";
 
 export default function Home() {

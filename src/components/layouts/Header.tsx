@@ -1,7 +1,7 @@
 import CartIcon from "@/assets/icons/CartIcon";
 import Logo from "./Logo";
-import SignInButton from "../buttons/SignInButton";
-import Avatar from "../Avatar";
+import SignInButton from "../common/buttons/SignInButton";
+import Avatar from "../common/Avatar";
 
 const Header = () => {
   const user = 1;

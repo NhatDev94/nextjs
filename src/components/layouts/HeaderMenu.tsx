@@ -1,4 +1,4 @@
-import MenuHeaderDropdown from "../dropdowns/MenuHeaderDropdown";
+import MenuHeaderDropdown from "../common/dropdowns/MenuHeaderDropdown";
 
 export default function HeaderMenu({ onSignOut }: { onSignOut: () => void }) {
   const items = [

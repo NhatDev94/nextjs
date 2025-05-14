@@ -13,7 +13,7 @@ export default function Sort() {
     },
   ];
   return (
-    <div className="w-fit flex items-center gap-x-4">
+    <div className="w-fit flex items-center gap-x-4 pb-4">
       <Title>Sort by:</Title>
       <Select items={items} />
     </div>

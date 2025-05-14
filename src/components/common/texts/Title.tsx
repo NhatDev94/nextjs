@@ -8,12 +8,12 @@ type TitleProps = {
 
 export default function Title({
   children,
-  className,
+  className = "",
   isRedirect = false,
 }: TitleProps) {
   return (
     <h4
-      className={`w-full text-base text-black font-semibold ${
+      className={`w-fit text-base text-black font-semibold ${
         isRedirect && "cursor-pointer hover:underline"
       } ${className}`}
     >

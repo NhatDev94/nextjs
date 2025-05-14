@@ -1,4 +1,4 @@
-import MenuHeaderDropdown from "../common/dropdowns/MenuHeaderDropdown";
+import DropDown from "../common/dropdowns/DropDown";
 
 export default function HeaderMenu({ onSignOut }: { onSignOut: () => void }) {
   const items = [
@@ -16,11 +16,11 @@ export default function HeaderMenu({ onSignOut }: { onSignOut: () => void }) {
 
   return (
     <div className="">
-      <MenuHeaderDropdown items={items}>
+      <DropDown items={items}>
         <div className="w-8 h-8 rounded-full border border-black/10 overflow-hidden bg-primary flex items-center justify-center font-semibold text-white text-sm cursor-pointer select-none">
           N
         </div>
-      </MenuHeaderDropdown>
+      </DropDown>
     </div>
   );
 }

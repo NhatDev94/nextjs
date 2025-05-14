@@ -1,3 +1,4 @@
+import { Button } from "@/components/shadcn/button";
 import {
   Form as FormRoot,
   FormControl,
@@ -7,8 +8,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/shadcn/form";
-import { Input } from "../shadcn/Input";
-import { Button } from "../shadcn/button";
+import { Input } from "@/components/shadcn/Input";
+import { Textarea } from "@/components/shadcn/textarea";
 
 type FormProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -39,9 +40,7 @@ export default function Form({
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{item.label}</FormLabel>
-                  <FormControl>
-                    <Input {...field} {...item.input} />
-                  </FormControl>
+                  <FormControl>{renderInput(field, item)}</FormControl>
                   <FormDescription />
                   <FormMessage />
                 </FormItem>
@@ -57,3 +56,25 @@ export default function Form({
     </FormRoot>
   );
 }
+
+const renderInput = (field: any, item: any) => {
+  switch (item.input.type) {
+    case "textarea":
+      return <Textarea {...field} {...item.input} />;
+    case "file":
+      return (
+        <Input
+          {...item.input}
+          type="file"
+          accept={item.input.accept}
+          onChange={(e: any) => {
+            const file = e.target.files[0];
+            field.onChange(file);
+          }}
+        />
+      );
+
+    default:
+      return <Input {...field} {...item.input} />;
+  }
+};

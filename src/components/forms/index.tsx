@@ -11,8 +11,11 @@ import { Input } from "../shadcn/Input";
 import { Button } from "../shadcn/button";
 
 type FormProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   form: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   formItems: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (data: any) => void;
   submitText: string;
 };
@@ -26,6 +29,7 @@ export default function Form({
   return (
     <FormRoot {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {formItems.map((item: any, i: number) => (
           <div className="mb-4" key={i}>
             <FormField

@@ -26,6 +26,7 @@ export default function SignUpForm() {
     resolver: zodResolver(SignInSchema),
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = (data: any) => {
     console.log(data);
   };

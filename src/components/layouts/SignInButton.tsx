@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SignInButton = ({ toSignIn }: { toSignIn: any }) => {
   return (
     <div className="flex items-center gap-x-4">

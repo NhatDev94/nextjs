@@ -5,7 +5,7 @@ export default function PremiumAds() {
         Achieve your career golds
       </p>
       <p className="pt-1 text-xs font-semibold text-text hover:text-link cursor-pointer">
-        Don't miss: Premium for d0
+        {"Don't miss: Premium for d0"}
       </p>
     </div>
   );

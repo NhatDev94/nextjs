@@ -30,8 +30,9 @@ export default function AddToYourFeed() {
       <h4 className="text-sm font-bold text-text pb-4">Add to your feed</h4>
 
       <div className="">
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {items.map((item: any, i: number) => (
-          <ProfileCard item={item} />
+          <ProfileCard item={item} key={i} />
         ))}
       </div>
       <h4 className="pt-2 text-sm font-semibold text-text-secondary cursor-pointer hover:underline">

@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 export default function SignInForm({
   onSubmit,
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (data: any) => void;
 }) {
   const SignInSchema = z.object({

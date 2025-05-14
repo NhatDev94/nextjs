@@ -23,6 +23,7 @@ export default function RootLayout({
   modal,
 }: Readonly<{
   children: React.ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   modal: any;
 }>) {
   return (

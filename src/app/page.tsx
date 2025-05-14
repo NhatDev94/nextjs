@@ -4,13 +4,13 @@ import { useSelector } from "react-redux";
 import ProfileBrief from "./components/ProfileBrief";
 import PremiumAds from "./components/PremiumAds";
 import QuickAccess from "./components/QuickAccess";
-import ProfileCard from "./components/ProfileCard";
 import AddToYourFeed from "./components/AddToYourFeed";
 import Footer from "@/components/layouts/Footer";
 import PostCreate from "./components/PostCreate";
 import Post from "@/components/post";
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const user = useSelector((state: any) => state.auth.user);
   return (
     <div className="w-full h-full">{!user ? <HomeContent /> : <Welcome />}</div>

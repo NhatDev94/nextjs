@@ -1,10 +1,6 @@
 import { authApi } from "@/apis/auth";
 import { SignInCredentials, SignUpCredentials } from "@/types/authType";
-import {
-  createAsyncThunk,
-  createSlice,
-  isRejectedWithValue,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 type User = {
   email: string;
@@ -39,7 +35,7 @@ const signIn = createAsyncThunk(
 );
 
 const signOut = createAsyncThunk("auth/signOut", async () => {
-  const res = await authApi.signOut();
+  await authApi.signOut();
   return { user: null, token: null };
 });
 
@@ -49,37 +45,37 @@ const AuthSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     // sign up
-    builder.addCase(signUp.pending, (state, action) => {
+    builder.addCase(signUp.pending, (state) => {
       state.status = "loading";
     });
-    builder.addCase(signUp.fulfilled, (state, action) => {
+    builder.addCase(signUp.fulfilled, (state) => {
       state.status = "succeeded";
     });
-    builder.addCase(signUp.rejected, (state, action) => {
+    builder.addCase(signUp.rejected, (state) => {
       state.status = "failed";
     });
 
     // sign in
-    builder.addCase(signIn.pending, (state, action) => {
+    builder.addCase(signIn.pending, (state) => {
       state.status = "loading";
     });
     builder.addCase(signIn.fulfilled, (state, action) => {
       state.status = "succeeded";
       state.user = action.payload;
     });
-    builder.addCase(signIn.rejected, (state, action) => {
+    builder.addCase(signIn.rejected, (state) => {
       state.status = "failed";
     });
 
     // sign out
-    builder.addCase(signOut.pending, (state, action) => {
+    builder.addCase(signOut.pending, (state) => {
       state.status = "loading";
     });
-    builder.addCase(signOut.fulfilled, (state, action) => {
+    builder.addCase(signOut.fulfilled, (state) => {
       state.status = "succeeded";
       state.user = null;
     });
-    builder.addCase(signOut.rejected, (state, action) => {
+    builder.addCase(signOut.rejected, (state) => {
       state.status = "failed";
     });
   },

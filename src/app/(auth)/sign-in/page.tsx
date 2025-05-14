@@ -13,7 +13,7 @@ export default function SignIn() {
   const handleClickSignUp = () => {
     router.push("/sign-up");
   };
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (data: any) => {
     await dispatch(signIn(data));
     router.push("/");
@@ -29,7 +29,7 @@ export default function SignIn() {
           <SignInForm onSubmit={handleSubmit} />
 
           <p className="text-sm mt-8 text-center font-semibold mb-8">
-            Don't have an account?{" "}
+            {"Don't have an account? "}
             <span
               onClick={handleClickSignUp}
               className="text-link cursor-pointer"

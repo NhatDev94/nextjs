@@ -1,7 +1,20 @@
 "use client";
 
-import { useSelector } from "react-redux";
+import Title from "@/components/texts/Title";
+import Sort from "./components/Sort";
 
 export default function Home() {
-  return <div className="w-full h-full bg-white">Home Page</div>;
+  return (
+    <div className="w-full h-full py-4">
+      <div className="w-full h-80 rounded-lg bg-yellow-200">Hero</div>
+
+      <div className="w-full px-4 rounded-lg bg-white mt-4 flex items-center justify-between">
+        <Title isRedirect={true} className="py-4">
+          Danh sách sản phẩm
+        </Title>
+
+        <Sort />
+      </div>
+    </div>
+  );
 }

@@ -9,7 +9,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <Provider store={store}>
       <div className="w-screen h-[100dvh] overflow-y-scroll bg-black/10">
         <Header />
-        <div className="w-full h-full">
+        <div className="w-full h-full pt-14">
           <div className="w-full max-w-[1080px] h-full mx-auto">{children}</div>
         </div>
       </div>

@@ -1,16 +1,20 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
+import {
+  AvatarFallback,
+  AvatarImage,
+  Avatar as AvatarRoot,
+} from "./shadcn/avatar";
 
 type AvatarProps = {
-  src: string | StaticImport;
-  alt: string;
+  src: string | Blob | undefined;
   size?: number;
 };
 
-export default function Avatar({ src, alt }: AvatarProps) {
+export default function Avatar({ src }: AvatarProps) {
   return (
-    <div className="w-18 min-w-[72px] h-18 min-h-[72px] rounded-full overflow-hidden border-2 border-white">
-      <Image src={src} alt={alt} className="object-cover h-full w-full" />
-    </div>
+    <AvatarRoot className="w-10 h-10">
+      <AvatarImage src={src} alt="avatar" />
+      <AvatarFallback>CN</AvatarFallback>
+    </AvatarRoot>
   );
 }

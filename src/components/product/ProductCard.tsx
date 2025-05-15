@@ -4,7 +4,7 @@ import Paragraph from "../common/texts/Paragraph";
 
 type ProductCardProps = {
   name: string;
-  description: string;
+  description?: string;
   src: string;
   price: string;
 };

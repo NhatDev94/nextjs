@@ -9,6 +9,7 @@ import {
 } from "../shadcn/select";
 
 type SelectProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   items: any;
 };
 
@@ -20,6 +21,7 @@ export default function Select({ items }: SelectProps) {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {items.map((item: any, i: number) => (
             <SelectItem key={i} value={item.id}>
               {item.name}

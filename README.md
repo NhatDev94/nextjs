@@ -5,5 +5,10 @@
 
 - Deploy firebase hosting:
 
-1. npm run build (khong can npm run export nua)
-2. firebase deploy
+1. add "output": "export" in next.config.ts
+2. npm run build
+3. firebase deploy
+
+========================================
+
+1.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layouts";
+import { ReactNode } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,8 +24,7 @@ export default function RootLayout({
   modal,
 }: Readonly<{
   children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  modal: any;
+  modal: ReactNode;
 }>) {
   return (
     <html lang="en">

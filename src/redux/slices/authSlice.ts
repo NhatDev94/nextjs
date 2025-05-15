@@ -1,6 +1,4 @@
-import { authApi } from "@/apis/auth";
-import { SignInCredentials, SignUpCredentials } from "@/types/authType";
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 type User = {
   uid: string;

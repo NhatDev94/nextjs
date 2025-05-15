@@ -6,6 +6,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase/indext";
 
 export default function AddProductModal(props: ModalProps) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const uploadImage = async (data: any) => {
     const formData = new FormData();
     formData.append("file", data.images);
@@ -21,14 +22,16 @@ export default function AddProductModal(props: ModalProps) {
     return res.url;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const addProductToFireStore = async (product: any) => {
     await setDoc(doc(db, "products", product.id), product);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (data: any) => {
     const url = await uploadImage(data);
 
-    addProductToFireStore({
+    await addProductToFireStore({
       id: String(Date.now()),
       name: data.name,
       description: data.description,
@@ -37,7 +40,9 @@ export default function AddProductModal(props: ModalProps) {
       url,
     });
 
-    props.onClose && props.onClose();
+    if (props.onClose) {
+      props.onClose();
+    }
   };
 
   return (

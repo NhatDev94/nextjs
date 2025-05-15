@@ -18,7 +18,7 @@ export default function ProductList({ products }: ProductListType) {
       </div>
 
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {products.map((item: any, i: number) => (
+        {products.map((item: Product, i: number) => (
           <div className="" key={i}>
             <ProductCard
               src={item.url}

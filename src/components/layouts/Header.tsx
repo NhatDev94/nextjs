@@ -5,7 +5,6 @@ import Avatar from "../common/Avatar";
 import useGoogleSignIn from "@/hooks/useGoogleSignIn";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import { DropdownMenu } from "../shadcn/dropdown-menu";
 import DropDown from "../common/dropdowns/DropDown";
 import { useRouter } from "next/navigation";
 

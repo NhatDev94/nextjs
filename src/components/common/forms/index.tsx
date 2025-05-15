@@ -57,6 +57,7 @@ export default function Form({
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const renderInput = (field: any, item: any) => {
   switch (item.input.type) {
     case "textarea":
@@ -67,6 +68,7 @@ const renderInput = (field: any, item: any) => {
           {...item.input}
           type="file"
           accept={item.input.accept}
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onChange={(e: any) => {
             const file = e.target.files[0];
             field.onChange(file);

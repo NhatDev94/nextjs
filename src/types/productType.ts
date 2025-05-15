@@ -4,4 +4,7 @@ export type Product = {
   description?: string;
   price: string;
   url: string;
+  quantity: number;
+  madeIn: string;
+  catalog: string;
 };
